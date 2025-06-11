@@ -32,7 +32,8 @@ def claim_faucet(private_key, proxy):
 # Main execution
 if __name__ == "__main__":
     private_keys = ['your_private_key1', 'your_private_key2']  # Add your private keys
-    proxies = ['proxy1:port', 'proxy2:port']  # Add your proxies
+    # Proxies with authentication in the format username:password@ip_address:port
+    proxies = ['user:pass@192.168.1.1:8080', 'user:pass@192.168.1.2:8080']  # Replace with your actual proxies
 
     for private_key, proxy in zip(private_keys, proxies):
         claim_faucet(private_key, proxy)
